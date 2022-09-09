@@ -4,7 +4,7 @@ env:
   variables:
     SONAR_VER: sonar-scanner-cli-4.7.0.2747-linux
     SONAR_HOME: /app/sonarcli
-    # PATH: $PATH:$SONAR_HOME/bin
+    PATH: $PATH:$SONAR_HOME/bin
 
 phases:
   install:
