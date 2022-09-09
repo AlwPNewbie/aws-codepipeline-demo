@@ -31,4 +31,4 @@ phases:
       
 cache:
   paths:
-    - '/opt/sonar-scanner/**/*'
+    - '/app/sonarcli/**/*'
