@@ -24,13 +24,11 @@ phases:
       - ls -la /app/sonarcli/sonar-scanner-4.7.0.2747-linux
   build:
     commands:
-      - echo Build started on `date`
+      #- echo Build started on `date`
       #- export PATH=${PATH}:${SONAR_HOME}/bin
       #- sonar-scanner -h
-       - /app/sonarcli/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.projectKey=$PROJECTKEY -Dsonar.sources=src -Dsonar.host.url=$SONARQUBE_ENDPOINT -Dsonar.login=$SONARCLOUD_TOKEN
-      #- sleep 5
-      #- curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$PROJECTKEY > analysis.json
-      #- cat analysis.json
+      - /app/sonarcli/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.projectKey=$PROJECTKEY -Dsonar.sources=src -Dsonar.host.url=$SONARQUBE_ENDPOINT -Dsonar.login=$SONARCLOUD_TOKEN
+
       
 cache:
   paths:
