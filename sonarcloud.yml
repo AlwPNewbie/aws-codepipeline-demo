@@ -21,9 +21,7 @@ phases:
     commands:
       #- echo Build started on `date`
       #- export PATH=${PATH}:${SONAR_HOME}/bin
-      #- sonar-scanner
-
-    commands:
+      #- sonar-scanner -h
       - sonar-scanner -Dsonar.projectKey=$PROJECTKEY -Dsonar.sources=src -Dsonar.host.url=$SONARQUBE_ENDPOINT -Dsonar.login=$SONARCLOUD_TOKEN
       #- sleep 5
       #- curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$PROJECTKEY > analysis.json
