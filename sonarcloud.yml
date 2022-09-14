@@ -1,13 +1,9 @@
 version: 0.2
 
-
-
 env:
   variables:
     SONAR_VER: sonar-scanner-cli-4.7.0.2747-linux
     SONAR_HOME: /app/sonarcli/sonar-scanner-4.7.0.2747-linux
-
-
 
 phases:
   install:
@@ -29,7 +25,7 @@ phases:
       #- sonar-scanner -h
       - /app/sonarcli/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner -Dsonar.projectKey=$PROJECTKEY -Dsonar.sources=src -Dsonar.host.url=$SONARQUBE_ENDPOINT -Dsonar.login=$SONARCLOUD_TOKEN
       - sleep 5
-      - md5sum *.zip > md5sums.txt
+      #- md5sum *.zip > md5sums.txt
       
 cache:
   paths:
